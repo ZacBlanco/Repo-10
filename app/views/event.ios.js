@@ -13,9 +13,6 @@ import {
   ListView,
 } from 'react-native';
 
-const Firebase = require('./config/Firebase.js');
-const db = Firebase.database();
-
 class ListingDetailEvent extends Component {
     constructor(props) {
       super(props);

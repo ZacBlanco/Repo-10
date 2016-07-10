@@ -13,9 +13,6 @@ import {
   ListView,
 } from 'react-native';
 
-const Firebase = require('./config/Firebase.js');
-const db = Firebase.database();
-
 class ListingDetailCoupon extends Component {
   constructor(props) {
     super(props);
@@ -25,8 +22,7 @@ class ListingDetailCoupon extends Component {
   }
 
   componentDidMount () {
-    //   let response = await fetch("http://192.168.84.183:8080/api/v1/reviews/listing/1" + this.state.listing.key());
-      let response = await fetch("http://192.168.85.118:8080/api/v1/reviews/listing/1");
+      let response = await fetch("http://192.168.84.183:8080/api/v1/reviews/listing/1" + this.state.listing.key());
       let responseJson = await response.json();
       this.setState({
         dataSource: this.state.dataSource.cloneWithRows(responseJson)
