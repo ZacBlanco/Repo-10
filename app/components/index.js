@@ -6,4 +6,5 @@ module.exports = {
   'ListingJob': require('./ListingJob.js'),
   'ListingCoupon': require('./ListingCoupon.js'),
   'Category': require('./Category.js'),
+  'Map': require('./Map.js'),
 };

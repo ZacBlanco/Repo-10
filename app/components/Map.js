@@ -62,6 +62,7 @@ class Map extends Component {
         <MapView
           region={this.state.region}
           onRegionChange={this.onRegionChange}
+          style={styles.map}
         >
           {this.state.markers.map(marker => (
             <MapView.Marker
@@ -76,20 +77,9 @@ class Map extends Component {
 }
 
 const styles = StyleSheet.create({
-  row: {
-    backgroundColor: '#eeeeee',
-    borderRadius: 2,
-    borderWidth: 0.5,
-    borderColor: '#c0c0c0',
-    marginHorizontal: 10,
-    marginVertical: 15,
-    marginTop: 0,
-    padding: 20,
-    justifyContent: 'center'
-  },
-  name: {
-    color: 'black',
-    fontSize: 16,
+  map: {
+    flex: 1,
+    width: 300,
   }
 })
 
